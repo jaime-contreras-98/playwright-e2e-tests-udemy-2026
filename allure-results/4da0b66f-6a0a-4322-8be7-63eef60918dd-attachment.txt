@@ -1,0 +1,12 @@
+[ERROR]: Failed to click locator('ul[role="menu"] > li.nav-item').filter({ hasText: 'Customers' }), error: Error: expect(locator).toBeVisible() failed
+
+Locator: locator('ul[role="menu"] > li.nav-item').filter({ hasText: 'Customers' })
+Expected: visible
+Error: strict mode violation: locator('ul[role="menu"] > li.nav-item').filter({ hasText: 'Customers' }) resolved to 2 elements:
+    1) <li class="nav-item has-treeview">…</li> aka getByText('Customers Customers Customer')
+    2) <li class="nav-item has-treeview">…</li> aka getByText('Reports PowerBI Sales summary')
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for locator('ul[role="menu"] > li.nav-item').filter({ hasText: 'Customers' })
+

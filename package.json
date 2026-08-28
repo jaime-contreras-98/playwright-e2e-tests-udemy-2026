@@ -4,13 +4,42 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "demo": "npx playwright test --headed --project=chromium"
+    "test:api": "npx playwright test api/users.api.spec.ts  --project=chromium --config=config/dev.playwright.config.ts",
+    "apt:e2e": "npx playwright test e2e/make.apt.spec.ts --headed --project=chromium  --config=config/dev.playwright.config.ts",
+    "test:e2e": "npx playwright test e2e/sauce.demo.spec.ts --headed --project=chromium  --config=config/dev.playwright.config.ts",
+    "demo:log-make-apt": "npx playwright test --headed --project=chromium demo/log.make.appointment.spec.ts",
+    "dev:make-apt": "npx playwright test functional/make.appointment.spec.ts --headed --config=config/dev.playwright.config.ts",
+    "test:make-apt": "npx playwright test functional/make.appointment.spec.ts --headed --config=config/test.playwright.config.ts",
+    "demo:csv-params": "npx playwright test --headed --project=chromium demo/params.make.appointment.spec.ts",
+    "demo:params": "npx playwright test --headed --project=chromium demo/csv.params.make.appointment.spec.ts",
+    "demo:parallel": "npx playwright test --headed --grep @demo",
+    "mytest": "npx playwright test demo/mytest.spec.ts --headed --project=chromium",
+    "pw-adv-cap": "DEBUG=pw:api npx playwright test demo/pw.adv.cap.login.spec.ts --headed --project=chromium",
+    "pw-basic-cap:tag": "npx playwright test --grep @smoke-suite --headed --project=chromium",
+    "pw-basic-cap": "npx playwright test demo/pw.basic.cap.make.appointment.spec.ts --headed --project=chromium",
+    "debug": "npx playwright test demo/debug.make.appointment.spec.ts --headed --project=chromium",
+    "debug:trace": "npx playwright test demo/debug.make.appointment.spec.ts --project=chromium --trace=on",
+    "debug:cli": "PWDEBUG=1 npx playwright test demo/debug.make.appointment.spec.ts --project=chromium",
+    "debug:ui": "npx playwright test demo/debug.make.appointment.spec.ts --headed --project=chromium --ui",
+    "demo": "npx playwright test --headed --project=chromium",
+    "login": "npx playwright test functional/login.spec.ts --headed --project=chromium",
+    "make-apt": "npx playwright test functional/make.appointment.spec.ts --headed",
+    "ele-int": "npx playwright test demo/ele.handling.make.appt.spec.ts --headed --project=chromium",
+    "inventory": "npx playwright test functional/inventory.spec.ts --headed --project=chromium"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.61.0",
-    "@types/node": "^25.9.3"
+    "@types/node": "^25.9.3",
+    "allure-playwright": "^3.10.2",
+    "chalk": "^6.0.0",
+    "csv-parse": "^7.0.2",
+    "dotenv": "^17.4.2",
+    "tsx": "^4.23.1"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
   }
 }

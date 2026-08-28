@@ -1,0 +1,168 @@
+{
+    "argv": [
+        "/usr/local/bin/node",
+        "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/node_modules/.bin/playwright",
+        "test",
+        "demo/mytest.spec.ts",
+        "--headed",
+        "--project=chromium"
+    ],
+    "configFile": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/playwright.config.ts",
+    "rootDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+        "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+        {
+            "grep": {},
+            "grepInvert": null,
+            "outputDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/test-results",
+            "repeatEach": 1,
+            "retries": 0,
+            "metadata": {},
+            "name": "chromium",
+            "testDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/tests",
+            "snapshotDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/tests",
+            "testIgnore": [],
+            "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+            "timeout": 30000,
+            "use": {
+                "trace": "on-first-retry",
+                "ignoreHTTPSErrors": true,
+                "navigationTimeout": 30000,
+                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.55 Safari/537.36",
+                "viewport": {
+                    "width": 1280,
+                    "height": 720
+                },
+                "screen": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "deviceScaleFactor": 1,
+                "isMobile": false,
+                "hasTouch": false,
+                "defaultBrowserType": "chromium",
+                "headless": false
+            },
+            "dependencies": [],
+            "ignoreSnapshots": false,
+            "__projectId": "chromium"
+        },
+        {
+            "grep": {},
+            "grepInvert": null,
+            "outputDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/test-results",
+            "repeatEach": 1,
+            "retries": 0,
+            "metadata": {},
+            "name": "firefox",
+            "testDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/tests",
+            "snapshotDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/tests",
+            "testIgnore": [],
+            "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+            "timeout": 30000,
+            "use": {
+                "trace": "on-first-retry",
+                "ignoreHTTPSErrors": true,
+                "navigationTimeout": 30000,
+                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0",
+                "viewport": {
+                    "width": 1280,
+                    "height": 720
+                },
+                "screen": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "deviceScaleFactor": 1,
+                "isMobile": false,
+                "hasTouch": false,
+                "defaultBrowserType": "firefox",
+                "headless": false
+            },
+            "dependencies": [],
+            "ignoreSnapshots": false,
+            "__projectId": "firefox"
+        },
+        {
+            "grep": {},
+            "grepInvert": null,
+            "outputDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/test-results",
+            "repeatEach": 1,
+            "retries": 0,
+            "metadata": {},
+            "name": "webkit",
+            "testDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/tests",
+            "snapshotDir": "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/tests",
+            "testIgnore": [],
+            "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+            "timeout": 30000,
+            "use": {
+                "trace": "on-first-retry",
+                "ignoreHTTPSErrors": true,
+                "navigationTimeout": 30000,
+                "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15",
+                "viewport": {
+                    "width": 1280,
+                    "height": 720
+                },
+                "screen": {
+                    "width": 1792,
+                    "height": 1120
+                },
+                "deviceScaleFactor": 2,
+                "isMobile": false,
+                "hasTouch": false,
+                "defaultBrowserType": "webkit",
+                "headless": false
+            },
+            "dependencies": [],
+            "ignoreSnapshots": false,
+            "__projectId": "webkit"
+        }
+    ],
+    "quiet": false,
+    "reporter": [
+        [
+            "html",
+            {
+                "open": "always"
+            }
+        ],
+        [
+            "/Users/jaime.contreras/Documents/Proyectos/typescript/playwright-e2e-tests-udemy-2026/node_modules/allure-playwright/dist/cjs/index.js",
+            {
+                "detail": true,
+                "suiteTitle": true,
+                "environemntInfo": {
+                    "name": "TEST",
+                    "appName": "CURA",
+                    "release": "1.1.0",
+                    "nodeVersion": "v20.10.0"
+                }
+            }
+        ]
+    ],
+    "reportSlowTests": {
+        "max": 5,
+        "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.0",
+    "workers": 4,
+    "webServer": null
+}

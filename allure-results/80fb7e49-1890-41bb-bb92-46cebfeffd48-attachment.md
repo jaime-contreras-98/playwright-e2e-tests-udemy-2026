@@ -1,0 +1,353 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: test-1.spec.ts >> Nopcommerce tests >> Nopcommerce login
+- Location: tests/test-1.spec.ts:16:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: "#"
+    - link [ref=e8] [cursor=pointer]:
+      - /url: /Admin
+    - list [ref=e10]:
+      - listitem
+      - listitem [ref=e11]:
+        - link "John Smith":
+          - /url: "#"
+      - listitem [ref=e12]:
+        - link "Logout" [ref=e13] [cursor=pointer]:
+          - /url: /logout
+      - listitem
+      - listitem [ref=e14]:
+        - link [ref=e15] [cursor=pointer]:
+          - /url: "#"
+  - complementary [ref=e17]:
+    - link "logo.png" [ref=e18] [cursor=pointer]:
+      - /url: /Admin
+      - img "logo.png" [ref=e19]
+    - generic [ref=e20]:
+      - textbox "Search" [ref=e24]
+      - navigation [ref=e25]:
+        - menu [ref=e26]:
+          - listitem [ref=e27]:
+            - link "Dashboard" [ref=e28] [cursor=pointer]:
+              - /url: /Admin
+              - paragraph [ref=e30]: Dashboard
+          - listitem [ref=e31]:
+            - link "Catalog" [ref=e32] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e34]: Catalog
+          - listitem [ref=e36]:
+            - link "Sales" [ref=e37] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e39]: Sales
+          - listitem [ref=e41]:
+            - link "Customers" [ref=e42] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e44]: Customers
+            - list [ref=e46]:
+              - listitem [ref=e47]:
+                - link "Customers" [ref=e48] [cursor=pointer]:
+                  - /url: /Admin/Customer/List
+                  - paragraph [ref=e50]: Customers
+              - listitem [ref=e51]:
+                - link "Customer roles" [ref=e52] [cursor=pointer]:
+                  - /url: /Admin/CustomerRole/List
+                  - paragraph [ref=e54]: Customer roles
+              - listitem [ref=e55]:
+                - link "Online customers" [ref=e56] [cursor=pointer]:
+                  - /url: /Admin/OnlineCustomer/List
+                  - paragraph [ref=e58]: Online customers
+              - listitem [ref=e59]:
+                - link "Vendors" [ref=e60] [cursor=pointer]:
+                  - /url: /Admin/Vendor/List
+                  - paragraph [ref=e62]: Vendors
+              - listitem [ref=e63]:
+                - link "Activity log" [ref=e64] [cursor=pointer]:
+                  - /url: /Admin/ActivityLog/ActivityLogs
+                  - paragraph [ref=e66]: Activity log
+              - listitem [ref=e67]:
+                - link "Activity Types" [ref=e68] [cursor=pointer]:
+                  - /url: /Admin/ActivityLog/ActivityTypes
+                  - paragraph [ref=e70]: Activity Types
+              - listitem [ref=e71]:
+                - link "GDPR requests (log)" [ref=e72] [cursor=pointer]:
+                  - /url: /Admin/Customer/GdprLog
+                  - paragraph [ref=e74]: GDPR requests (log)
+          - listitem [ref=e75]:
+            - link "Promotions" [ref=e76] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e78]: Promotions
+          - listitem [ref=e80]:
+            - link "Content management" [ref=e81] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e83]: Content management
+          - listitem [ref=e85]:
+            - link "Configuration" [ref=e86] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e88]: Configuration
+          - listitem [ref=e90]:
+            - link "System" [ref=e91] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e93]: System
+          - listitem [ref=e95]:
+            - link "Reports" [ref=e96] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e98]: Reports
+          - listitem [ref=e100]:
+            - link "Help" [ref=e101] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e103]: Help
+  - generic [ref=e106]:
+    - generic [ref=e107]:
+      - heading "Customers" [level=1] [ref=e108]
+      - generic [ref=e109]:
+        - link "Add new" [ref=e110] [cursor=pointer]:
+          - /url: /Admin/Customer/Create
+          - text: Add new
+        - generic [ref=e112]:
+          - button "Export" [ref=e113] [cursor=pointer]: Export
+          - button [ref=e115] [cursor=pointer]
+        - button "Import" [ref=e117] [cursor=pointer]: Import
+    - generic [ref=e122]:
+      - generic [ref=e124]:
+        - generic [ref=e126] [cursor=pointer]: Search
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - generic [ref=e133]:
+              - generic [ref=e134]:
+                - generic [ref=e137]: Email
+                - textbox "Email" [ref=e141]
+              - generic [ref=e142]:
+                - generic [ref=e145]: First name
+                - textbox "First name" [ref=e149]
+              - generic [ref=e150]:
+                - generic [ref=e153]: Last name
+                - textbox "Last name" [ref=e157]
+              - generic [ref=e158]:
+                - generic [ref=e161]: Is active
+                - combobox "Is active" [ref=e165]:
+                  - option "All"
+                  - option "Yes" [selected]
+                  - option "No"
+              - generic [ref=e166]:
+                - generic [ref=e169]: Registration date from
+                - textbox "Registration date from" [ref=e173]
+              - generic [ref=e174]:
+                - generic [ref=e177]: Registration date to
+                - textbox "Registration date to" [ref=e181]
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - generic [ref=e186]: Last activity from
+                - textbox "Last activity from" [ref=e190]
+              - generic [ref=e191]:
+                - generic [ref=e194]: Last activity to
+                - textbox "Last activity to" [ref=e198]
+              - generic [ref=e199]:
+                - generic [ref=e202]: Company
+                - textbox "Company" [ref=e206]
+              - generic [ref=e207]:
+                - generic [ref=e210]: IP address
+                - textbox "IP address" [ref=e214]
+              - generic [ref=e215]:
+                - generic [ref=e218]: Customer roles
+                - generic [ref=e222]:
+                  - listbox [ref=e223]:
+                    - option [ref=e224]: Administrators
+                    - option [ref=e225]: Forum Moderators
+                    - option [selected] [ref=e226]: Registered
+                    - option [ref=e227]: Guests
+                    - option [ref=e228]: Vendors
+                  - combobox [ref=e231]:
+                    - list [ref=e232]:
+                      - listitem "Registered" [ref=e233]: × Registered
+                      - listitem [ref=e234]:
+                        - searchbox [ref=e235]
+          - button "Search" [ref=e238] [cursor=pointer]: Search
+      - generic [ref=e241]:
+        - generic [ref=e243]:
+          - text: Learn more about
+          - link "customers" [ref=e244] [cursor=pointer]:
+            - /url: https://docs.nopcommerce.com/running-your-store/customer-management/managing-customers.html?utm_source=demo-admin-panel&utm_medium=admin-page&utm_campaign=documentation&utm_content=doc-reference
+        - generic [ref=e245]:
+          - generic [ref=e248]:
+            - table [ref=e251]:
+              - rowgroup [ref=e252]:
+                - row "Email Name Customer roles Company name Active Edit" [ref=e253]:
+                  - columnheader [ref=e254]:
+                    - checkbox [ref=e257]
+                  - columnheader "Email" [ref=e258]:
+                    - generic [ref=e260]: Email
+                  - columnheader "Name" [ref=e261]:
+                    - generic [ref=e263]: Name
+                  - columnheader "Customer roles" [ref=e264]:
+                    - generic [ref=e266]: Customer roles
+                  - columnheader "Company name" [ref=e267]:
+                    - generic [ref=e269]: Company name
+                  - columnheader "Active" [ref=e270]:
+                    - generic [ref=e272]: Active
+                  - columnheader "Edit" [ref=e273]:
+                    - generic [ref=e275]: Edit
+            - table [ref=e285]:
+              - rowgroup:
+                - row "Email Name Customer roles Company name Active Edit":
+                  - columnheader:
+                    - checkbox [ref=e288]
+                  - columnheader "Email":
+                    - generic [ref=e290]: Email
+                  - columnheader "Name":
+                    - generic [ref=e292]: Name
+                  - columnheader "Customer roles":
+                    - generic [ref=e294]: Customer roles
+                  - columnheader "Company name":
+                    - generic [ref=e296]: Company name
+                  - columnheader "Active":
+                    - generic [ref=e298]: Active
+                  - columnheader "Edit":
+                    - generic [ref=e300]: Edit
+              - rowgroup [ref=e301]:
+                - row "demouser1@test.com Demo User1 Registered xoxox Edit" [ref=e302]:
+                  - cell [ref=e303]:
+                    - checkbox [ref=e304]
+                  - cell "demouser1@test.com" [ref=e305]
+                  - cell "Demo User1" [ref=e306]
+                  - cell "Registered" [ref=e307]
+                  - cell "xoxox" [ref=e308]
+                  - cell [ref=e309]
+                  - cell "Edit" [ref=e311]:
+                    - link "Edit" [ref=e312] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/909
+                      - text: Edit
+                - row "mmm@gmail.com jen Registered aa Edit" [ref=e314]:
+                  - cell [ref=e315]:
+                    - checkbox [ref=e316]
+                  - cell "mmm@gmail.com" [ref=e317]
+                  - cell "jen" [ref=e318]
+                  - cell "Registered" [ref=e319]
+                  - cell "aa" [ref=e320]
+                  - cell [ref=e321]
+                  - cell "Edit" [ref=e323]:
+                    - link "Edit" [ref=e324] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/25
+                      - text: Edit
+                - row "steve_gates@nopCommerce.com Steve Gates Registered Edit" [ref=e326]:
+                  - cell [ref=e327]:
+                    - checkbox [ref=e328]
+                  - cell "steve_gates@nopCommerce.com" [ref=e329]
+                  - cell "Steve Gates" [ref=e330]
+                  - cell "Registered" [ref=e331]
+                  - cell [ref=e332]
+                  - cell [ref=e333]
+                  - cell "Edit" [ref=e335]:
+                    - link "Edit" [ref=e336] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/4
+                      - text: Edit
+                - row "arthur_holmes@nopCommerce.com Arthur Holmes Registered Edit" [ref=e338]:
+                  - cell [ref=e339]:
+                    - checkbox [ref=e340]
+                  - cell "arthur_holmes@nopCommerce.com" [ref=e341]
+                  - cell "Arthur Holmes" [ref=e342]
+                  - cell "Registered" [ref=e343]
+                  - cell [ref=e344]
+                  - cell [ref=e345]
+                  - cell "Edit" [ref=e347]:
+                    - link "Edit" [ref=e348] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/5
+                      - text: Edit
+                - row "james_pan@nopCommerce.com James Pan Registered Edit" [ref=e350]:
+                  - cell [ref=e351]:
+                    - checkbox [ref=e352]
+                  - cell "james_pan@nopCommerce.com" [ref=e353]
+                  - cell "James Pan" [ref=e354]
+                  - cell "Registered" [ref=e355]
+                  - cell [ref=e356]
+                  - cell [ref=e357]
+                  - cell "Edit" [ref=e359]:
+                    - link "Edit" [ref=e360] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/6
+                      - text: Edit
+                - row "brenda_lindgren@nopCommerce.com Brenda Lindgren Registered Edit" [ref=e362]:
+                  - cell [ref=e363]:
+                    - checkbox [ref=e364]
+                  - cell "brenda_lindgren@nopCommerce.com" [ref=e365]
+                  - cell "Brenda Lindgren" [ref=e366]
+                  - cell "Registered" [ref=e367]
+                  - cell [ref=e368]
+                  - cell [ref=e369]
+                  - cell "Edit" [ref=e371]:
+                    - link "Edit" [ref=e372] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/7
+                      - text: Edit
+                - row "victoria_victoria@nopCommerce.com Victoria Terces Registered Edit" [ref=e374]:
+                  - cell [ref=e375]:
+                    - checkbox [ref=e376]
+                  - cell "victoria_victoria@nopCommerce.com" [ref=e377]
+                  - cell "Victoria Terces" [ref=e378]
+                  - cell "Registered" [ref=e379]
+                  - cell [ref=e380]
+                  - cell [ref=e381]
+                  - cell "Edit" [ref=e383]:
+                    - link "Edit" [ref=e384] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/8
+                      - text: Edit
+                - row "admin@yourStore.com John Smith Administrators, Forum Moderators, Registered Edit" [ref=e386]:
+                  - cell [ref=e387]:
+                    - checkbox [ref=e388]
+                  - cell "admin@yourStore.com" [ref=e389]
+                  - cell "John Smith" [ref=e390]
+                  - cell "Administrators, Forum Moderators, Registered" [ref=e391]
+                  - cell [ref=e392]
+                  - cell [ref=e393]
+                  - cell "Edit" [ref=e395]:
+                    - link "Edit" [ref=e396] [cursor=pointer]:
+                      - /url: /Admin/Customer/Edit/1
+                      - text: Edit
+            - generic:
+              - generic:
+                - table
+          - generic [ref=e399]:
+            - navigation "pagination" [ref=e401]:
+              - list [ref=e402]:
+                - listitem [ref=e403]:
+                  - generic "Previous"
+                - listitem [ref=e404]:
+                  - link "1" [ref=e405] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=e406]:
+                  - generic "Next"
+            - generic [ref=e408]:
+              - text: Show
+              - combobox "Show items" [ref=e409]:
+                - option "7"
+                - option "15" [selected]
+                - option "20"
+                - option "50"
+                - option "100"
+              - text: items
+            - status [ref=e410]: 1-8 of 8 items
+            - button [ref=e412] [cursor=pointer]
+  - generic [ref=e418]:
+    - generic [ref=e419]:
+      - text: Powered by
+      - link "nopCommerce" [ref=e420] [cursor=pointer]:
+        - /url: https://www.nopcommerce.com/?utm_source=demo-admin-panel&utm_medium=footer&utm_campaign=admin-panel
+    - generic [ref=e421]: Monday, August 24, 2026 4:27 PM
+    - generic [ref=e422]: nopCommerce version 4.90.4
+```

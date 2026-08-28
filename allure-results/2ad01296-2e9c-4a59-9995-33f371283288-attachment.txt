@@ -1,0 +1,7 @@
+[INFO]: Navigating to path https://admin-demo.nopcommerce.com/login
+User George Bluth was not found...
+User Janet Weaver was found!!
+User Emma Wong was found!!
+User Eve Holt was found!!
+User Charles Morris was found!!
+User Tracey Ramos was found!!

@@ -1,0 +1,10 @@
+{
+    "statusCodes": {
+        "success": 200,
+        "error": 707
+    },
+    "REQ_RES_ENDPOINTS": {
+        "GET_USERS": "/users?page=1",
+        "POST_USERS": "/users"
+    }
+}
