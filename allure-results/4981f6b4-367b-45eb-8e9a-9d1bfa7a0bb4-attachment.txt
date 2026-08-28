@@ -1,1 +1,0 @@
-[ERROR]: Failed to type on element locator('#SearchFirstName'), error: Error: locator.fill: value: expected string, got undefined

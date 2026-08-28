@@ -23,7 +23,7 @@
     "debug:ui": "npx playwright test demo/debug.make.appointment.spec.ts --headed --project=chromium --ui",
     "demo": "npx playwright test --headed --project=chromium",
     "login": "npx playwright test functional/login.spec.ts --headed --project=chromium",
-    "make-apt": "npx playwright test functional/make.appointment.spec.ts --headed",
+    "make-apt": "npx playwright test functional/make.appointment.spec.ts --config=config/dev.playwright.config.ts",
     "ele-int": "npx playwright test demo/ele.handling.make.appt.spec.ts --headed --project=chromium",
     "inventory": "npx playwright test functional/inventory.spec.ts --headed --project=chromium"
   },

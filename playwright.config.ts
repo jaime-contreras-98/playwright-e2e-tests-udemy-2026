@@ -52,7 +52,7 @@ export const baseConfig = defineConfig({
     ignoreHTTPSErrors: true,
     navigationTimeout: 30_000,
     screenshot: 'only-on-failure',
-    headless: true,
+    headless: process.env.CI ? true : false,
     //video: 'off',
     //actionTimeout: 10_000
     userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",

@@ -1,7 +1,0 @@
-[INFO]: Navigating to path https://admin-demo.nopcommerce.com/login
-User not found...
-User not found...
-User found!!
-User found!!
-User found!!
-User found!!
