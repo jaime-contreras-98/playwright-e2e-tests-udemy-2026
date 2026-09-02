@@ -15,7 +15,6 @@ pipeline {
             steps {
                 sh '''
                     set -eu
-                    sudo su apt-get install -y libatomic1
                     npm ci
                     npx playwright install
                 '''
