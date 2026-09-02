@@ -5,8 +5,6 @@ pipeline {
         allure 'allure'
     }
     options {
-        //buildDiscarder(logRotator(numToKeepStr: '10'))
-        //disableConcurrentBuilds()
         timeout(time: 20, unit: 'MINUTES')
     }
     environment {
@@ -25,11 +23,10 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                    export TEST_USERNAME=${TEST_CREDS_USR}
-                    export TEST_PASSWORD=${TEST_CREDS_PSW}
+                    export TEST_USERNAME="$TEST_CREDS_USR"
+                    export TEST_PASSWORD="$TEST_CREDS_PSW"
                     npm run dev:make-apt
                 '''
-            }
         }
         post {
             always {
@@ -37,6 +34,7 @@ pipeline {
                 jdk: '',
                 results: [[path: 'allure-results']],
                 reportBuildPolicy: 'ALWAYS',
+                }
             }
         }
     }
