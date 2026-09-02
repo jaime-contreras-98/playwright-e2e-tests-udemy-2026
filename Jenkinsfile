@@ -8,7 +8,7 @@ pipeline {
         timeout(time: 20, unit: 'MINUTES')
     }
     environment {
-        TEST_CREDS = credentials('e2e_user')
+        TEST_CREDS = credentials('e2e-user')
     }
     stages {
         stage('Build') {
