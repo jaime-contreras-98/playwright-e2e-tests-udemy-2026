@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         nodejs 'node26'
-        allure 'allure'
+        allure3 'allure'
     }
     options {
         timeout(time: 20, unit: 'MINUTES')
