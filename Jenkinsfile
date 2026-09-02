@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh '''
                     set -eu
-                    npm ci
+                    npm i
                     npx playwright install
                 '''
             }
